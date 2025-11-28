@@ -1,7 +1,6 @@
 """
 Semantic Classification Script
-Classifies a column in a CSV file into semantic types:
-Phone Number, Company Name, Country, Date, Other
+Classifies columns into: Phone Number, Company Name, Country, Date, Other
 """
 
 import argparse

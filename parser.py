@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
 """
 Parser Script
 Parses Phone Number and Company Name columns from CSV files
-Outputs to output.csv with parsed fields
 """
 
 import argparse

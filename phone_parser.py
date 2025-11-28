@@ -1,6 +1,5 @@
 """
-Phone Number Parser Module
-Parses phone numbers into Country and Number fields
+Phone Number Parser
 """
 
 import phonenumbers

@@ -1,6 +1,5 @@
 """
-Company Name Parser Module
-Parses company names into Name and Legal fields
+Company Name Parser
 """
 
 import re
@@ -18,7 +17,7 @@ class CompanyParser:
     def load_legal_suffixes(self):
         """Load legal suffixes from file"""
         try:
-            with open('legal.txt', 'r', encoding='utf-8') as f:
+            with open('TrainingData/legal.txt', 'r', encoding='utf-8') as f:
                 self.legal_suffixes = {line.strip().lower() for line in f if line.strip()}
         except FileNotFoundError:
             # Default legal suffixes

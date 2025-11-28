@@ -1,6 +1,5 @@
 """
 Semantic Classification Module
-Classifies columns into: Phone Number, Company Name, Country, Date, Other
 """
 
 import pandas as pd
@@ -23,20 +22,20 @@ class SemanticClassifier:
     def load_reference_data(self):
         """Load reference data for classification"""
         try:
-            # Load countries
-            with open('Countries.txt', 'r', encoding='utf-8') as f:
+            # Load countries from TrainingData folder
+            with open('TrainingData/countries.txt', 'r', encoding='utf-8') as f:
                 self.countries = {line.strip().lower() for line in f if line.strip()}
         except FileNotFoundError:
-            print("Warning: Countries.txt not found, using default country list")
+            print("Warning: TrainingData/countries.txt not found, using default country list")
             self.countries = {'india', 'usa', 'united states', 'uk', 'united kingdom', 
                             'china', 'japan', 'germany', 'france', 'canada', 'australia'}
         
         try:
-            # Load legal suffixes
-            with open('legal.txt', 'r', encoding='utf-8') as f:
+            # Load legal suffixes from TrainingData folder
+            with open('TrainingData/legal.txt', 'r', encoding='utf-8') as f:
                 self.legal_suffixes = {line.strip().lower() for line in f if line.strip()}
         except FileNotFoundError:
-            print("Warning: legal.txt not found, using default legal suffixes")
+            print("Warning: TrainingData/legal.txt not found, using default legal suffixes")
             self.legal_suffixes = {'ltd', 'limited', 'inc', 'incorporated', 'corp', 'corporation',
                                  'llc', 'gmbh', 'ag', 'pvt', 'private', 'co', 'kg', 'plc'}
     
