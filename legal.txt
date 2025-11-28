@@ -1,0 +1,17 @@
+ltd
+limited
+inc
+incorporated
+corp
+corporation
+llc
+gmbh
+ag
+pvt
+private
+co
+kg
+plc
+sa
+nv
+bv
